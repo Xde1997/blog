@@ -1175,6 +1175,14 @@ dependencies = [
 ]
 
 [[package]]
+name = "rust-configd-server"
+version = "0.1.0"
+dependencies = [
+ "actix-web",
+ "serde_json",
+]
+
+[[package]]
 name = "rustc_version"
 version = "0.2.3"
 source = "registry+https://github.com/rust-lang/crates.io-index"
@@ -1278,13 +1286,6 @@ dependencies = [
  "itoa",
  "ryu",
  "serde",
-]
-
-[[package]]
-name = "service-center"
-version = "0.1.0"
-dependencies = [
- "actix-web",
 ]
 
 [[package]]

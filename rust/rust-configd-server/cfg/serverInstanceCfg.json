@@ -1,0 +1,10 @@
+{
+    "kind":"config",
+    "instance_name":"configd1",
+    "sd_hosts":"127.0.0.1:2379",
+    "host": "127.0.0.1",
+    "port":19501,
+    "support_cors":true,
+    "support_sr":true,
+    "local_enable":true
+}
