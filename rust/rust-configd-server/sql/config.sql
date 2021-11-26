@@ -12,7 +12,7 @@ create table  if not exists `config_item`(
     `lastmodifier`  varchar(255) not null,
     `lastmodifydate` date,
     PRIMARY KEY (objid)
-)engine=innodb default charset=utf-8;
+)engine=innodb default charset=utf8;
 CREATE INDEX searchConfig ON config_item (label,servicename,module,type)
 
 -- /blog/api/configd/{label:dev/release}/{servicename}/{module}/{function}/{properties}
