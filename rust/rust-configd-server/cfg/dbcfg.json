@@ -1,0 +1,6 @@
+{
+  "sql_type":"mysql",
+  "db_url": "mysql://root:123456@localhost:3306/blog",
+  "user": "root",
+  "password": "123456"
+}

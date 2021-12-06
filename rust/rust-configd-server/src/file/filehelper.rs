@@ -1,15 +1,14 @@
 use serde_json::{Deserializer, Serializer};
-use serde::Deserialize;
+use serde::de;
 
 pub mod JsonFile {
     use std::io::Read;
 
-    pub fn JsonFileParser<T>(filepath: &str, s: &mut T) -> T
-    where T: serde::Deserialize{
+    pub fn JsonFileParser<'a, T,E>(filepath: &str, s: &mut T) -> Result<T, E>
+    where T: serde::de::Deserialize<'a>{
         let mut file = std::fs::File::open(filepath).unwrap();
         let mut buffer;
         let result = file.read_to_string(&mut buffer)?;
-        let deserialized:T = serde_json::from_str(&buffer);
-        return deserialized;
+        serde_json::from_str(&buffer)?
     }
 }
